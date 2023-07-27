@@ -1,0 +1,46 @@
+{
+  "name": "buddha-ext",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --mode dev",
+    "staging": "vite --mode staging",
+    "prod": "vite --mode prod",
+    "build-dev": "run-s type-check build-only-dev zip",
+    "build-staging": "run-s type-check build-only-staging zip",
+    "build-prod": "run-s type-check build-only-prod zip",
+    "build": "run-s type-check build-only-prod",
+    "build-only-dev": "vite build --mode dev",
+    "build-only-staging": "vite build --mode staging",
+    "build-only-prod": "vite build --mode prod",
+    "type-check": "vue-tsc --noEmit",
+    "zip": "node ./script/zip.js"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "async": "^3.2.4",
+    "date-fns": "^2.30.0",
+    "element-plus": "^2.2.9",
+    "lodash": "^4.17.21",
+    "pinia": "^2.1.4",
+    "query-string": "^8.1.0",
+    "sweetalert2": "^11.7.12",
+    "vue": "^3.2.37",
+    "vue-router": "^4.2.2"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^1.0.12",
+    "@types/async": "^3.2.20",
+    "@types/node": "^20.3.2",
+    "@types/vue-router": "^2.0.0",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "archiver": "^5.3.1",
+    "autoprefixer": "^10.4.14",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.24",
+    "sass": "^1.63.6",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.14",
+    "vue-tsc": "^0.38.5"
+  }
+}

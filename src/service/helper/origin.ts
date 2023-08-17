@@ -40,7 +40,7 @@ export const syncOrigin = (url_list: string[]) => {
         }))
 
         // thay đổi declarative_net_request
-        chrome.declarativeNetRequest.updateDynamicRules({
+        chrome?.declarativeNetRequest?.updateDynamicRules({
             removeRuleIds: RULE_LIST.map(rule => rule.id),
             addRules: RULE_LIST,
         })
